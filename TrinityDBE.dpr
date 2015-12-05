@@ -2,13 +2,17 @@ program TrinityDBE;
 
 uses
   Vcl.Forms,
-  MainUnit in 'MainUnit.pas' {Form1};
+  GeneralUnit in 'GeneralUnit.pas' {GeneralForm},
+  DBCfile in 'DBCfile.pas',
+  Functions in 'Functions.pas',
+  Translate in 'Translate.pas',
+  CheckQuestThreadUnit in 'CheckQuestThreadUnit.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TGeneralForm, GeneralForm);
   Application.Run;
 end.
